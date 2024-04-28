@@ -200,7 +200,7 @@ svg {
 }
 .footer-contacts {
 }
-.footer-contacts h2 {
+.footer-label {
 	font-size: 1em;
 	font-weight: 500;
 	margin-bottom: 20px;
@@ -208,7 +208,8 @@ svg {
 .footer-sotials {
 	gap: 16px;
 }
-.footer .social-link:hover {
+.footer .social-link:hover,
+.footer .social-link:focus {
 	background-color: rgba(var(--success-cl), 1);
 }
 
@@ -245,6 +246,8 @@ svg {
 	background-image: linear-gradient(rgba(46, 47, 66, 0.7), 
 rgba(46, 47, 66, 0.7)), url(../images/main-hero-bg.jpeg);
 	background-size: cover;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 .section-hero > .container {
 	display: flex;
@@ -315,7 +318,8 @@ rgba(46, 47, 66, 0.7)), url(../images/main-hero-bg.jpeg);
 .team-card-socials {
 	margin-top: 8px;
 }
-.team-card-socials .social-link:hover {
+.team-card-socials .social-link:hover,
+.team-card-socials .social-link:focus {
 	background-color: rgba(var(--primary-active-cl), 1);
 }
 
@@ -334,7 +338,8 @@ rgba(46, 47, 66, 0.7)), url(../images/main-hero-bg.jpeg);
 	transition-duration: var(--trans-duration);
 	transition-timing-function: var(--trans-timing-func);
 }
-.customer-link:hover {
+.customer-link:hover,
+.customer-link:focus {
 	border-color: rgba(var(--primary-active-cl), 1);
 	color: rgba(var(--primary-active-cl), 1);
 }
@@ -412,8 +417,8 @@ rgba(46, 47, 66, 0.7)), url(../images/main-hero-bg.jpeg);
 	color: currentColor;
 	box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
-.portfolio-card:focus .portfolio-card-overlay,
-.portfolio-card:hover .portfolio-card-overlay {
+.portfolio-card a:focus .portfolio-card-overlay,
+.portfolio-card a:hover .portfolio-card-overlay {
   transform: translateY(0);
 }
 
@@ -451,7 +456,7 @@ rgba(46, 47, 66, 0.7)), url(../images/main-hero-bg.jpeg);
   opacity: 0;
   transition-delay: 0ms;
 }
-.modal-btn {
+.modal-close-btn {
   position: absolute;
   top: 24px;
   right: 24px;
@@ -465,4 +470,11 @@ rgba(46, 47, 66, 0.7)), url(../images/main-hero-bg.jpeg);
   border: none;
 	border-radius: 50%;
 	color: rgba(var(--text-cl), 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus,
+.modal-close-btn:active {
+	color: rgba(var(--white), 1);
+	background-color: rgba(var(--primary-active-cl), 1);
 }
